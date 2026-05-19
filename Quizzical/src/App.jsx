@@ -10,13 +10,14 @@ function App() {
   const [screen, setScreen] = useState('landing');
   const [questions, setQuestions] = useState([]);
   const [isChecked, setIsChecked] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   function checkAnswers() {
-    setIsChecked(true)
+    setIsChecked(true);
   }
 
   function selectOption(questionId, optionId) {
-    if (isChecked)  return;
+    if (isChecked) return;
     setQuestions((prevQns) => {
       return prevQns.map((question) => {
         if (question.id === questionId) {
@@ -35,9 +36,12 @@ function App() {
   }
 
   function startQuiz() {
+    setScreen('quiz');
+    setIsLoading(true);
+    setIsChecked(false);
     const quizQuestions = getQuizQuestions();
     setQuestions(quizQuestions);
-    setScreen('quiz');
+    setIsLoading(false);
   }
 
   return (
@@ -46,10 +50,12 @@ function App() {
         <Landing startQuiz={startQuiz} />
       ) : (
         <Quiz
+          isLoading={isLoading}
           questions={questions}
           selectOption={selectOption}
           isChecked={isChecked}
           checkAnswers={checkAnswers}
+          playAgain={startQuiz}
         />
       )}
     </main>

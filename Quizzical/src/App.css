@@ -10,7 +10,7 @@
 
 /* Top-right yellow blob */
 .app::before {
-  content: "";
+  content: '';
   position: fixed;
   width: 300px;
   height: 300px;
@@ -23,7 +23,7 @@
 
 /* Bottom-left blue blob */
 .app::after {
-  content: "";
+  content: '';
   position: fixed;
   width: 300px;
   height: 300px;
@@ -39,7 +39,7 @@
   border-radius: 15px;
   background-color: #4d5b9e;
   color: white;
-  font-family: "Inter", sans-serif;;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 500;
   padding: 1rem 2.5rem;
@@ -62,7 +62,6 @@
   font-size: 1rem;
   font-weight: 400;
 }
-
 
 .quiz {
   width: min(90%, 600px);
@@ -89,11 +88,11 @@
 }
 
 .option-btn {
-  border: 1px solid #4D5B9E;
+  border: 1px solid #4d5b9e;
   border-radius: 12px;
   background-color: transparent;
   color: #293264;
-  font-family: "Inter", sans-serif;;
+  font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.35rem 1rem;
@@ -105,20 +104,20 @@
 }
 
 .option-btn.selected {
-  background-color: #D6DBF5;
-  border-color: #D6DBF5;
+  background-color: #d6dbf5;
+  border-color: #d6dbf5;
 }
 
-.option-btn.correct{
-  background-color: #94D7A2;
-  border-color: #94D7A2;
+.option-btn.correct {
+  background-color: #94d7a2;
+  border-color: #94d7a2;
 }
-.option-btn.wrong{
-  background-color: #F8BCBC;
-  border-color: #A31D1D;
-  color: #A31D1D;
+.option-btn.wrong {
+  background-color: #f8bcbc;
+  border-color: #a31d1d;
+  color: #a31d1d;
 }
-.option-btn.muted{
+.option-btn.muted {
   opacity: 0.5;
 }
 
@@ -127,4 +126,49 @@
   margin: 1.5rem auto 0;
   padding: 0.8rem 1.8rem;
   font-size: 0.9rem;
+}
+
+.quiz-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.quiz-footer .primary-btn {
+  margin: 0;
+  padding: 0.75rem 1.6rem;
+  font-size: 0.85rem;
+  border-radius: 12px;
+}
+
+.score-text {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #293264;
+}
+
+.score-num {
+  display: inline-block;
+  color: #293264;
+  background-color: #d6dbf5;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  margin-inline: 0.2rem;
+}
+
+@media (max-width: 480px) {
+  .quiz-footer {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .quiz-footer .primary-btn {
+    width: 100%;
+    max-width: 220px;
+  }
 }
