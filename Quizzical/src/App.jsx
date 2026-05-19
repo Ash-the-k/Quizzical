@@ -35,13 +35,19 @@ function App() {
     });
   }
 
-  function startQuiz() {
+  async function startQuiz() {
     setScreen('quiz');
     setIsLoading(true);
     setIsChecked(false);
-    const quizQuestions = getQuizQuestions();
-    setQuestions(quizQuestions);
-    setIsLoading(false);
+
+    try {
+      const quizQuestions = await getQuizQuestions();
+      setQuestions(quizQuestions);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (

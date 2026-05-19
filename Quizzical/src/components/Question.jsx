@@ -1,7 +1,6 @@
-import Option from "./Option";
+import Option from './Option';
 
 function Question({ question, selectOption, isChecked }) {
-    // console.log(question)
   const optionComponents = question.options.map((option) => (
     <Option
       key={option.id}
