@@ -172,3 +172,24 @@
     max-width: 220px;
   }
 }
+
+.loading-state {
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  text-align: center;
+}
+
+.loading-text {
+  margin: 0.35rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #293264;
+}
+
+.loading-subtext {
+  margin: 0;
+}
