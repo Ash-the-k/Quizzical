@@ -39,7 +39,7 @@
   border-radius: 15px;
   background-color: #4d5b9e;
   color: white;
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;;
   font-size: 1rem;
   font-weight: 500;
   padding: 1rem 2.5rem;
@@ -65,5 +65,53 @@
 
 
 .quiz {
-  width: min(90%, 700px);
+  width: min(90%, 600px);
+  padding: 2.5rem 0;
+}
+
+.question {
+  padding-block: 1rem;
+  border-bottom: 1px solid #dbdef0;
+}
+
+.question h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #293264;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.option-btn {
+  border: 1px solid #4D5B9E;
+  border-radius: 12px;
+  background-color: transparent;
+  color: #293264;
+  font-family: "Inter", sans-serif;;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+}
+
+.option-btn:hover {
+  background-color: #eef0ff;
+}
+
+.option-btn.selected {
+  background-color: #D6DBF5;
+  border-color: #D6DBF5;
+}
+
+.quiz .primary-btn {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.9rem;
 }

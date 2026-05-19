@@ -1,10 +1,12 @@
 import Option from "./Option";
 
-function Question({ question }) {
+function Question({ question, selectOption }) {
   const optionComponents = question.options.map((option) => (
     <Option
       key={option.id}
       option={option}
+      questionId={question.id}
+      selectOption={selectOption}
     />
   ));
   return (

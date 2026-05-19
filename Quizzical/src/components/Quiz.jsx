@@ -1,10 +1,14 @@
-import Question from "./Question";
+import Question from './Question';
 
-function Quiz({ questions }) {
-
-    // console.log(questions[0].id)
+function Quiz({ questions, selectOption }) {
+  // console.log(questions[0].id)
+  console.log(questions)
   const questionComponents = questions.map((quizQn) => (
-    <Question key={quizQn.id} question={quizQn}  />
+    <Question
+      key={quizQn.id}
+      question={quizQn}
+      selectOption={selectOption}
+    />
   ));
   return (
     <section className="quiz">
