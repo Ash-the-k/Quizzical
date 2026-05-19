@@ -1,7 +1,25 @@
-function Option({ option, questionId, selectOption }) {
+import { clsx } from 'clsx';
+
+function Option({
+  option,
+  questionId,
+  selectOption,
+  isChecked,
+  correctOption,
+}) {
+  const className = clsx(
+    'option-btn',
+    !isChecked && option.isSelected && 'selected',
+    isChecked && {
+      correct : correctOption,
+      wrong : !correctOption && option.isSelected,
+      muted : !correctOption
+    }
+  );
+
   return (
     <button
-      className={option.isSelected ? "option-btn selected" : "option-btn"}
+      className={className}
       onClick={() => selectOption(questionId, option.id)}
     >
       {option.text}

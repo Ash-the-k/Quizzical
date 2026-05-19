@@ -1,12 +1,15 @@
 import Option from "./Option";
 
-function Question({ question, selectOption }) {
+function Question({ question, selectOption, isChecked }) {
+    // console.log(question)
   const optionComponents = question.options.map((option) => (
     <Option
       key={option.id}
       option={option}
       questionId={question.id}
       selectOption={selectOption}
+      isChecked={isChecked}
+      correctOption={question.correctOptionId === option.id}
     />
   ));
   return (

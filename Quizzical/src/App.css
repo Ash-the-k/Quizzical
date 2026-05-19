@@ -109,6 +109,19 @@
   border-color: #D6DBF5;
 }
 
+.option-btn.correct{
+  background-color: #94D7A2;
+  border-color: #94D7A2;
+}
+.option-btn.wrong{
+  background-color: #F8BCBC;
+  border-color: #A31D1D;
+  color: #A31D1D;
+}
+.option-btn.muted{
+  opacity: 0.5;
+}
+
 .quiz .primary-btn {
   display: block;
   margin: 1.5rem auto 0;

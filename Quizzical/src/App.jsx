@@ -9,8 +9,14 @@ import { useState } from 'react';
 function App() {
   const [screen, setScreen] = useState('landing');
   const [questions, setQuestions] = useState([]);
+  const [isChecked, setIsChecked] = useState(false);
+
+  function checkAnswers() {
+    setIsChecked(true)
+  }
 
   function selectOption(questionId, optionId) {
+    if (isChecked)  return;
     setQuestions((prevQns) => {
       return prevQns.map((question) => {
         if (question.id === questionId) {
@@ -42,6 +48,8 @@ function App() {
         <Quiz
           questions={questions}
           selectOption={selectOption}
+          isChecked={isChecked}
+          checkAnswers={checkAnswers}
         />
       )}
     </main>
