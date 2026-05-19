@@ -1,0 +1,69 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Top-right yellow blob */
+.app::before {
+  content: "";
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  top: -130px;
+  right: -120px;
+  background-color: #fffad1;
+  border-radius: 35% 65% 70% 30% / 30% 40% 60% 70%;
+  z-index: -1;
+}
+
+/* Bottom-left blue blob */
+.app::after {
+  content: "";
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  bottom: -140px;
+  left: -140px;
+  background-color: #deebf8;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  z-index: -1;
+}
+
+.primary-btn {
+  border: none;
+  border-radius: 15px;
+  background-color: #4d5b9e;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+}
+
+.landing {
+  text-align: center;
+  padding: 2rem;
+}
+
+.landing-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.landing-description {
+  margin-block: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+
+.quiz {
+  width: min(90%, 700px);
+}
