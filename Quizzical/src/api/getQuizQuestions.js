@@ -1,4 +1,8 @@
+import decodeHtml from "../utils/decodeHtml"
+import shuffleArray from "../utils/shuffleArray"
+
 function getQuizQuestions() {
+
   return [
     {
       id: "q1",
