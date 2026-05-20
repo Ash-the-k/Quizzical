@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/favicon.png" alt="Quizzical Logo" width="110" />
+  <img src="public/favicon.png" alt="Quizzical Logo" width="240" />
 </p>
 
 <h1 align="center">Quizzical</h1>
