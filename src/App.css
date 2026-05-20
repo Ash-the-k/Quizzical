@@ -67,6 +67,10 @@
   padding: 2.5rem 0;
 }
 
+.quiz-title {
+  margin: 0 0 0.75rem;
+}
+
 .question {
   padding-block: 1rem;
   border-bottom: 1px solid #dbdef0;
@@ -210,6 +214,10 @@
   .quiz {
     width: min(92%, 600px);
     padding: 2rem 0 2rem;
+  }
+
+  .quiz-title {
+    margin: 0.67em 0;
   }
 
   .question {

@@ -5,7 +5,7 @@ function Landing({ startQuiz }) {
       <p className="landing-description">
         Test your knowledge with a quick quiz.
       </p>
-      <button className="primary-btn" onClick={startQuiz}>Start quiz</button>
+      <button className="primary-btn" onClick={startQuiz}>Start Quiz</button>
     </section>
   );
 }

@@ -43,7 +43,7 @@ function Quiz({
   ));
   return (
     <section className="quiz">
-      <h1>Quiz screen</h1>
+      <h1 className="quiz-title">Your Quiz</h1>
 
       {questionComponents}
 
@@ -53,22 +53,22 @@ function Quiz({
             className="primary-btn"
             onClick={checkAnswers}
           >
-            Check answers
+            Check Answers
           </button>
         ) : (
           <>
             <h3 className="score-text">
-              You scored{' '}
+              Your Score: {' '}
               <strong className="score-num">
                 {count}/{questions.length}
-              </strong>{' '}
+              </strong>
             </h3>
 
             <button
               className="primary-btn"
               onClick={playAgain}
             >
-              Play again
+              Play Again
             </button>
           </>
         )}
