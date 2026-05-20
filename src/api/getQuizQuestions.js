@@ -2,7 +2,7 @@ import decodeHtml from '../utils/decodeHtml';
 import shuffleArray from '../utils/shuffleArray';
 
 async function getQuizQuestions() {
-  const res = await fetch('https://opentdb.com/api.php?amount=5&type=multiple');
+  const res = await fetch('https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple');
   const data = await res.json();
 
   const questions = data.results.map((question, questionIndex) => {
