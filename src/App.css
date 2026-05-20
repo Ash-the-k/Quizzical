@@ -52,14 +52,15 @@
 
 .landing-title {
   margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 10rem;
+  font-weight: 600;
 }
 
 .landing-description {
-  margin-block: 0.75rem 1.75rem;
+  margin-block: 0rem 1rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .quiz {
@@ -69,6 +70,8 @@
 
 .quiz-title {
   margin: 0 0 0.75rem;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 600;
 }
 
 .question {
@@ -211,7 +214,10 @@
     padding: 2rem;
   }
 
-  .quiz {
+  .landing-title {
+    font-size: clamp(4rem, 18vw, 5rem);
+  }
+  Í .quiz {
     width: min(92%, 600px);
     padding: 2rem 0 2rem;
   }
