@@ -1,6 +1,7 @@
 import './App.css';
 import Landing from './components/Landing';
 import Quiz from './components/Quiz';
+import Footer from './components/Footer';
 
 import getQuizQuestions from './api/getQuizQuestions';
 
@@ -64,6 +65,7 @@ function App() {
           playAgain={startQuiz}
         />
       )}
+      <Footer />
     </main>
   );
 }
