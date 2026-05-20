@@ -62,7 +62,6 @@ function Quiz({
               <strong className="score-num">
                 {count}/{questions.length}
               </strong>{' '}
-              correct answers
             </h3>
 
             <button

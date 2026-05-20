@@ -1,7 +1,6 @@
 .app {
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
 
   display: flex;
   align-items: center;
@@ -133,7 +132,8 @@
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
-  margin-top: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
   flex-wrap: wrap;
 }
 
@@ -161,18 +161,6 @@
   margin-inline: 0.2rem;
 }
 
-@media (max-width: 480px) {
-  .quiz-footer {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  .quiz-footer .primary-btn {
-    width: 100%;
-    max-width: 220px;
-  }
-}
-
 .loading-state {
   min-height: 420px;
   display: flex;
@@ -192,4 +180,92 @@
 
 .loading-subtext {
   margin: 0;
+}
+
+@media (max-width: 480px) {
+  .app {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .app::before {
+    width: 220px;
+    height: 220px;
+    top: -110px;
+    right: -110px;
+  }
+
+  .app::after {
+    width: 220px;
+    height: 220px;
+    bottom: -120px;
+    left: -120px;
+  }
+
+  .landing {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .quiz {
+    width: min(92%, 600px);
+    padding: 2rem 0 2rem;
+  }
+
+  .question {
+    padding-block: 0.9rem;
+  }
+
+  .question h2 {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .options-container {
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .option-btn {
+    width: 100%;
+    padding: 0.55rem 0.8rem;
+    font-size: 0.78rem;
+    line-height: 1.3;
+  }
+
+  .quiz-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.65rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    flex-wrap: nowrap;
+  }
+
+  .score-text {
+    font-size: 0.78rem;
+    line-height: 1.25;
+    max-width: 145px;
+  }
+
+  .score-num {
+    padding: 0.1rem 0.45rem;
+    margin-inline: 0.1rem;
+  }
+
+  .quiz-footer .primary-btn {
+    width: auto;
+    max-width: none;
+    white-space: nowrap;
+    padding: 0.65rem 1rem;
+    font-size: 0.78rem;
+  }
+
+  .loading-state {
+    min-height: 420px;
+    gap: 0.85rem;
+  }
 }
